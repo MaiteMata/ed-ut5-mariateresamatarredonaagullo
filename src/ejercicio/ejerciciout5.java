@@ -6,6 +6,9 @@ public class ejerciciout5 {
     public static void main(String[] args) {
         int secreto = 1 + (int) (Math.random() * 100);
         int intentos = 0;
+
+        System.out.println("¡Hola! ¿Te atreves a adivinar el número?");
+
         System.out.println("Elige un número entre 1 y 100 :");
         boolean acertado = false;
         Scanner sc = new Scanner(System.in);
@@ -25,6 +28,7 @@ public class ejerciciout5 {
             }
 
             intentos++;
+
         }
 
     }
