@@ -4,16 +4,18 @@ import java.util.Scanner;
 
 public class ejerciciout5 {
     public static void main(String[] args) {
+        int numero;
         int secreto = 1 + (int) (Math.random() * 100);
         int intentos = 0;
+        Scanner sc = new Scanner(System.in);
+
 
         System.out.println("¡Hola! ¿Te atreves a adivinar el número?");
 
-        System.out.println("Elige un número entre 1 y 100 :");
         boolean acertado = false;
-        Scanner sc = new Scanner(System.in);
-        while (!acertado) {
-            int numero = sc.nextInt();
+        do{
+            System.out.print("Elige un número entre 1 y 100 :");
+            numero = sc.nextInt();
 
             if (numero == secreto) {
                 acertado = true;
@@ -29,7 +31,7 @@ public class ejerciciout5 {
 
             intentos++;
 
-        }
+        } while (!acertado);
 
     }
 }
